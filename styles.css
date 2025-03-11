@@ -1,0 +1,46 @@
+/* General body and background settings */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.redd.it/cool-wallpapers-v0-zk60molghkvb1.png?width=3840&format=png&auto=webp&s=711b40a433739582df0bc2a0eb4945b3c0f09dd1');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;  /* Ensure text is visible over the background */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Overlay to darken the background and make text readable */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: -1; /* Ensure overlay is behind the content */
+}
+
+/* Container for the page content */
+.container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+    padding: 30px;
+}
+
+/* Card settings for events */
+.card {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.7); /* Make the cards slightly transparent */
+    color: black; /* Ensure text is black inside cards */
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.pagination {
+    margin-top: 20px;
+}

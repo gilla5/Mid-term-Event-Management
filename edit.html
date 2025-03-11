@@ -9,28 +9,31 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Edit Event</h1>
-        <form id="edit-event-form">
+        <h1 class="text-center">Edit Event</h1>
+
+        <form id="editEventForm">
             <div class="mb-3">
-                <label for="edit-event-title" class="form-label">Event Title</label>
-                <input type="text" class="form-control" id="edit-event-title" required>
+                <label for="title" class="form-label">Event Title</label>
+                <input type="text" class="form-control" id="title" required>
             </div>
             <div class="mb-3">
-                <label for="edit-event-date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="edit-event-date" required>
+                <label for="date" class="form-label">Event Date</label>
+                <input type="date" class="form-control" id="date" required>
             </div>
             <div class="mb-3">
-                <label for="edit-event-time" class="form-label">Time</label>
-                <input type="time" class="form-control" id="edit-event-time" required>
+                <label for="time" class="form-label">Event Time</label>
+                <input type="time" class="form-control" id="time" required>
             </div>
             <div class="mb-3">
-                <label for="edit-event-location" class="form-label">Location</label>
-                <input type="text" class="form-control" id="edit-event-location" required>
+                <label for="location" class="form-label">Event Location</label>
+                <input type="text" class="form-control" id="location" required>
             </div>
-            <button type="submit" class="btn btn-primary">Update Event</button>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
+
+        <a href="index.html" class="btn btn-secondary mt-3">Back to Event List</a>
     </div>
 
-    <script src="app.js"></script>
+    <script src="editEvent.js"></script>
 </body>
 </html>

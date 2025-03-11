@@ -9,28 +9,31 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Create New Event</h1>
-        <form id="create-event-form">
+        <h1 class="text-center">Create New Event</h1>
+
+        <form id="addEventForm">
             <div class="mb-3">
-                <label for="event-title" class="form-label">Event Title</label>
-                <input type="text" class="form-control" id="event-title" required>
+                <label for="title" class="form-label">Event Title</label>
+                <input type="text" class="form-control" id="title" required>
             </div>
             <div class="mb-3">
-                <label for="event-date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="event-date" required>
+                <label for="date" class="form-label">Event Date</label>
+                <input type="date" class="form-control" id="date" required>
             </div>
             <div class="mb-3">
-                <label for="event-time" class="form-label">Time</label>
-                <input type="time" class="form-control" id="event-time" required>
+                <label for="time" class="form-label">Event Time</label>
+                <input type="time" class="form-control" id="time" required>
             </div>
             <div class="mb-3">
-                <label for="event-location" class="form-label">Location</label>
-                <input type="text" class="form-control" id="event-location" required>
+                <label for="location" class="form-label">Event Location</label>
+                <input type="text" class="form-control" id="location" required>
             </div>
             <button type="submit" class="btn btn-primary">Create Event</button>
         </form>
+
+        <a href="index.html" class="btn btn-secondary mt-3">Back to Event List</a>
     </div>
 
-    <script src="app.js"></script>
+    <script src="createEvent.js"></script>
 </body>
 </html>

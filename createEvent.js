@@ -14,10 +14,17 @@ document.getElementById('addEventForm').addEventListener('submit', function(e) {
         location
     };
 
-    let events = JSON.parse(localStorage.getItem('events')) || [];
-    events.push(newEvent);
-
-    localStorage.setItem('events', JSON.stringify(events));
-
-    window.location.href = 'index.html'; 
+    fetch('https://jsonblob.com/api/1370163375648202752')
+        .then(response => response.json())
+        .then(events => {
+            events.push(newEvent);
+            return fetch('https://jsonblob.com/api/1370163375648202752', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(events)
+            });
+        })
+        .then(() => {
+            window.location.href = 'index.html';
+        });
 });

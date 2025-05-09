@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.redd.it/cool-wallpapers-v0-zk60molghkvb1.png?width=3840&format=png&auto=webp&s=711b40a433739582df0bc2a0eb4945b3c0f09dd1');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* Keep the background fixed during scrolling */
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+/* Optional: add a dark overlay to improve text readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Ensure all content stays above the overlay */
+.container, form, .card, h1, h2, h3, h4, h5, h6, p, label, input, button {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    padding: 30px;
+}
+
+/* Card settings for event display */
+.card {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.btn {
+    margin: 5px;
+}

@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;  /* Keep the background fixed during scrolling */
+    background-attachment: fixed;  
     color: white;
     margin: 0;
     padding: 0;
@@ -13,7 +13,6 @@ body {
 }
 
 
-/* Optional: add a dark overlay to improve text readability */
 body::before {
     content: "";
     position: fixed;
@@ -25,7 +24,6 @@ body::before {
     z-index: 0;
 }
 
-/* Ensure all content stays above the overlay */
 .container, form, .card, h1, h2, h3, h4, h5, h6, p, label, input, button {
     position: relative;
     z-index: 1;
@@ -35,7 +33,6 @@ body::before {
     padding: 30px;
 }
 
-/* Card settings for event display */
 .card {
     border: 1px solid #ddd;
     margin-bottom: 15px;

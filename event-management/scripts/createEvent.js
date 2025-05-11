@@ -17,12 +17,12 @@ document.getElementById('createEventForm').addEventListener('submit', async func
         });
 
         if (!response.ok) {
-            // If the response is not OK, throw an error with the message from the backend
+        
             const error = await response.json();
             throw new Error(error.message || 'Failed to create event');
         }
 
-        // If the request was successful, redirect to the index page
+       
         window.location.href = 'index.html';
     } catch (error) {
         console.error('Error creating event:', error);

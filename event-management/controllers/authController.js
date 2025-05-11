@@ -20,4 +20,3 @@ exports.signup = async (req, res) => {
     }
 };
 
-// login controller similar to signup with JWT token response

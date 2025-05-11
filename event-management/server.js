@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const userRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
-const Event = require('./models/event'); // 👈 Import your Event model
+const Event = require('./models/event');
 
 const app = express();
 
@@ -21,7 +21,6 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   .then(async () => {
     console.log('Connected to MongoDB');
 
-    // ✅ Seed default events if none exist
     const existingEvents = await Event.find();
     if (existingEvents.length === 0) {
       await Event.insertMany([

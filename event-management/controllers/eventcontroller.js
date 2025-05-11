@@ -12,4 +12,4 @@ exports.createEvent = async (req, res) => {
     }
 };
 
-// other CRUD operations (read, update, delete) for events
+

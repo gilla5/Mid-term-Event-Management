@@ -4,7 +4,7 @@ const auth = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
-// Get all events
+
 router.get('/', async (req, res) => {
   try {
     const events = await Event.find();
@@ -27,29 +27,29 @@ router.post('/', auth, async (req, res) => {
       date,
       time,
       location,
-      createdBy: req.user // Set the user ID who created the event
+      createdBy: req.user 
     });
 
     await newEvent.save();
-    res.json(newEvent); // Make sure this is sending back the event data
+    res.json(newEvent); 
   } catch (err) {
     res.status(500).json({ message: 'Server Error' });
   }
 });
 
 
-// Update event
+
 router.put('/:id', auth, async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);
     if (!event) return res.status(404).json({ message: 'Event not found' });
 
-    // Ensure the user is the creator of the event
+    
     if (event.createdBy.toString() !== req.user.toString()) {
       return res.status(403).json({ message: 'Unauthorized' });
     }
 
-    // Update event
+    
     Object.assign(event, req.body);
     await event.save();
     res.json(event);
@@ -58,13 +58,13 @@ router.put('/:id', auth, async (req, res) => {
   }
 });
 
-// Delete event
+
 router.delete('/:id', auth, async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);
     if (!event) return res.status(404).json({ message: 'Event not found' });
 
-    // Ensure the user is the creator of the event
+    
     if (event.createdBy.toString() !== req.user.toString()) {
       return res.status(403).json({ message: 'Unauthorized' });
     }
